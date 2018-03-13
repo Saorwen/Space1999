@@ -10,9 +10,16 @@ public class EagleSpawner : MonoBehaviour {
 	public GameObject prefab;
 
 	void Awake() {
-		Instantiate (prefab, transform.position, transform.rotation, transform);
+		GameObject leader = Instantiate (prefab, transform.position, transform.rotation, transform) as GameObject;
+
+		for (int i = 1; i < ((Followers + 1) / 2); i++) {
+			GameObject follower = Instantiate (prefab, leader.transform.position + new Vector3(gap*i, 0, gap*i), leader.transform.rotation, transform) as GameObject;
+		}
+		for (int i = 1; i < ((Followers + 1) / 2); i++) {
+			GameObject follower = Instantiate (prefab, leader.transform.position + new Vector3(gap*i, 0, gap*-i), leader.transform.rotation, transform) as GameObject;
+		}
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		
