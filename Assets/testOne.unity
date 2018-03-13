@@ -301,4 +301,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gap: 20
   Followers: 2
-  prefab: {fileID: 0}
+  prefab: {fileID: 1008179607858528, guid: 7ad2cb131a28e874e84d11f861829c72, type: 2}

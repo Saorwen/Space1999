@@ -9,9 +9,8 @@ public class EagleSpawner : MonoBehaviour {
 
 	public GameObject prefab;
 
-	// Use this for initialization
-	void Start () {
-		
+	void Awake() {
+		Instantiate (prefab, transform.position, transform.rotation, transform);
 	}
 	
 	// Update is called once per frame
